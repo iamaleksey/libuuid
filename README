@@ -1,0 +1,8 @@
+This is Erlang NIF binding to the libuuid C library.
+The libuuid C library was written by Theodore Y. Ts'o for the ext2 filesystem utilties
+(available from http://e2fsprogs.sourceforge.net/).
+
+Run 'make' to build the binding, 'make test' to run the unit tests,
+and 'make doc' will generate Edoc documentation.
+
+Copyright (c) 2011 Aleksey Yeschenko <aleksey@yeschenko.com>.
