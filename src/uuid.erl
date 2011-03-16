@@ -34,51 +34,44 @@
 %% API
 %% -------------------------------------------------------------------------
 
-%% @spec generate() -> UUID16::binary()
 %% @doc Generates a UUID based on high-quality randomness from
 %% /dev/urandom, if available.
--spec generate/0 :: () -> binary().
+-spec generate/0 :: () -> UUID16::binary().
 generate() ->
     erlang:nif_error(not_loaded).
 
-%% @spec generate_random() -> UUID16::binary()
 %% @doc Generates a UUID using the all-random format, even if a high-quality
 %% random number generator (i.e., /dev/urandom) is not available.
--spec generate_random/0 :: () -> binary().
+-spec generate_random/0 :: () -> UUID16::binary().
 generate_random() ->
     erlang:nif_error(not_loaded).
 
-%% @spec generate_time() -> UUID16::binary()
 %% @doc Generates a UUID using the current time and the local ethernet MAC
 %% address (if available).
--spec generate_time/0 :: () -> binary().
+-spec generate_time/0 :: () -> UUID16::binary().
 generate_time() ->
     erlang:nif_error(not_loaded).
 
-%% @spec parse(UUID36::binary()) -> UUID16::binary()
 %% @doc Converts the UUID from a 36-bytes-binary-string into a 16-bytes-binary.
--spec parse/1 :: (binary()) -> binary().
+-spec parse/1 :: (UUID36::binary()) -> UUID16::binary().
 parse(_Bin) ->
     erlang:nif_error(not_loaded).
 
-%% @spec unparse(UUID16::binary()) -> UUID36::binary()
 %% @doc Converts the UUID from a 16-bytes-binary into a 36-bytes-binary-string.
 %% May be upper or lower case depending on the system.
--spec unparse/1 :: (binary()) -> binary().
+-spec unparse/1 :: (UUID16::binary()) -> UUID36::binary().
 unparse(_UUID) ->
     erlang:nif_error(not_loaded).
 
-%% @spec unparse_upper(UUID16::binary()) -> UUID36::binary()
 %% @doc Converts the UUID from a 16-bytes-binary into an uppercase
 %% 36-bytes-binary-string.
--spec unparse_upper/1 :: (binary()) -> binary().
+-spec unparse_upper/1 :: (UUID16::binary()) -> UUID36::binary().
 unparse_upper(_UUID) ->
     erlang:nif_error(not_loaded).
 
-%% @spec unparse_lower(UUID16::binary()) -> UUID36::binary()
 %% @doc Converts the UUID from a 16-bytes-binary into a lowercase
 %% 36-bytes-binary-string.
--spec unparse_lower/1 :: (binary()) -> binary().
+-spec unparse_lower/1 :: (UUID16::binary()) -> UUID36::binary().
 unparse_lower(_UUID) ->
     erlang:nif_error(not_loaded).
 
