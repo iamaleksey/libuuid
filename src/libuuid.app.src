@@ -1,6 +1,4 @@
-{application, libuuid, [
-    {description, "An Erlang wrapper for libuuid."},
-    {vsn, "1.0.0"},
-    {modules, []},
-    {applications, [kernel, stdlib]}
-]}.
+{application, libuuid,
+ [{description, "An Erlang wrapper for libuuid."},
+  {vsn, "1.0.0"},
+  {applications, [kernel, stdlib]}]}.

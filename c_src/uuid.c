@@ -125,7 +125,7 @@ unparse_generic(ErlNifEnv* env, const ERL_NIF_TERM argv[], char type)
     }
 
     memcpy(uuid, bin16.data, 16);
-    
+
     if (type == UNPARSE_DEFAULT)
         uuid_unparse(uuid, buf);
     else if (type == UNPARSE_UPPER)
