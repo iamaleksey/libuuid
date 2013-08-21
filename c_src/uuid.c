@@ -139,6 +139,12 @@ unparse_generic(ErlNifEnv* env, const ERL_NIF_TERM argv[], char type)
     return enif_make_binary(env, &bin36);
 }
 
+static int
+upgrade(ErlNifEnv* env, void** priv_data, void** old_priv_data, ERL_NIF_TERM load_info)
+{
+    return 0;
+}
+
 static ErlNifFunc nif_funcs[] = {
     {"generate",        0, erl_uuid_generate},
     {"generate_random", 0, erl_uuid_generate_random},
@@ -149,4 +155,4 @@ static ErlNifFunc nif_funcs[] = {
     {"unparse_lower",   1, erl_uuid_unparse_lower}
 };
 
-ERL_NIF_INIT(uuid, nif_funcs, NULL, NULL, NULL, NULL)
+ERL_NIF_INIT(uuid, nif_funcs, NULL, NULL, upgrade, NULL)
